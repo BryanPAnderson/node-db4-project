@@ -1,6 +1,6 @@
 const db = require("../data/config");
 
-const getRecipesById = (id) => {
+const getRecipesById = (recipe_id) => {
     return db("recipes").where({id}).first()
 }
 
