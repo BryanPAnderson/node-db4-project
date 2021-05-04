@@ -3,8 +3,7 @@ const router = require("./router");
 const server = express()
 
 server.use(express.json())
-server.use("../api/router/recipes", router)
-//server.use("../api/router/ingredients", router)
+server.use(router)
 
 server.use((req, res ,next) => {
     res.json({
