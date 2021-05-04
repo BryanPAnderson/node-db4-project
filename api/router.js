@@ -2,7 +2,7 @@ const express = require("express");
 const db = require("./router-model")
 const router = express.Router();
 
-router.get("/recipes/:id", async (req, res, next) => {
+router.get("/api/router/recipes/:id", async (req, res, next) => {
     try {
         await db.getRecipesById(req.params.id)
             .then((recipe) => {
